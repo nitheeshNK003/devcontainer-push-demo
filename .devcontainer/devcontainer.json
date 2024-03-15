@@ -1,0 +1,23 @@
+{
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "remoteUser": "LENS",
+    "containerUser": "LENS",
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+    // "customizations": {
+    //     "vscode": {
+    //         "extensions": [
+    //             "GitHub.vscode-pull-request-github",
+    //             "ms-vscode.cpptools",
+    //             "twxs.cmake",
+    //             "ms-azuretools.vscode-docker",
+    //             "redhat.vscode-yaml",
+    //             "ms-python.python"
+    //         ]
+    //     }
+    // },
+    "postCreateCommand": "bash -c 'cat /usr/local/etc/vscode-dev-containers/welcome.txt; exec bash'"
+}
